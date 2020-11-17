@@ -34,7 +34,7 @@
                     </div>
                     <a style="text-decoration: none;float: right;color: #187FAB;" data-toggle="tooltip" href="index.php">Back to first page</a><br>
                     <button id="login" class="btn btn-info btn-lg" name="login">Login</button>
-                    <?php include("../prax3/functions/check.php"); ?>
+                    <?php include("functions/check.php"); ?>
                 </form>
             </div>
         </div>
