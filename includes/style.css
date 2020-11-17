@@ -1,0 +1,60 @@
+body{
+    overflow-x: hidden;
+}
+
+.well {
+    background-color: lightskyblue;
+}
+
+button {
+    position: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.row {
+    text-align: center;
+}
+
+.main-content {
+    width: 50%;
+    height: 40%;
+    margin: 10px auto;
+    background-color: #fff;
+    border: 2px solid deepskyblue;
+    padding: 30px 30px;
+}
+
+label {
+    margin: 10px;
+}
+
+#registration{
+    width: 60%;
+    border-radius: 30px;
+}
+#login{
+    width: 60%;
+    background-color: #fff;
+    border: 1px solid #1da1f2;
+    color: #1da1f2;
+    border-radius: 30px;
+}
+#login:hover{
+    width: 60%;
+    background-color: #fff;
+    color: #1da1f2;
+    border: 2px solid #1da1f2;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
