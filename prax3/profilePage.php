@@ -30,7 +30,7 @@ if(isset($_GET['person_id'])) {
     </div>
     <div class="col-sm-6">
         <?php
-        echo"
+        echo "
 			<div id='profile-img'>
 				<img src='image/pep.jpg' alt='Profile' class='img-circle' width='225px' height='225px'>
 			</div><br>
