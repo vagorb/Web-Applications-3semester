@@ -1,4 +1,4 @@
-<?php
+ <?php
 include_once("includes/db.php");
 
 $stmt = db()->prepare("SELECT * FROM friends WHERE user_id = ?");

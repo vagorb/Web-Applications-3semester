@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <meta charset="UTF-8">
-</head
+</head>
 <body>
     <div class="row">
         <div class="col-sm-12">
@@ -24,7 +24,7 @@
                 <h3>Log in to Mini Facebook</h3>
             </div>
             <div >
-                <form action="" method="post">
+                <form method="post">
 
                     <label for="email">E-mail</label><input id="email" type="email" name="email" placeholder="Email" required="required" class="form-control input-md">
                     <br>

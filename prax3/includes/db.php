@@ -11,8 +11,7 @@ if ('127.0.0.1' == $_SERVER['REMOTE_ADDR'] OR '::1' == $_SERVER['REMOTE_ADDR']) 
         define('DB_BASE', 'vagorb');
 }
 
-
-
+//mysql -u s_vagorb -p zThQ3f6A vagorb < data/minifacebook.sql
 
 function db() {
     static $conn;

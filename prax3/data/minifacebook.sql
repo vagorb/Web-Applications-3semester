@@ -26,6 +26,11 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `comments`
 --
+DROP TABLE IF EXISTS `comments`;
+DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `likes`;
+DROP TABLE IF EXISTS `posts`;
+DROP TABLE IF EXISTS `friends`;
 
 CREATE TABLE `comments` (
   `comment_id` int(11) NOT NULL,
@@ -148,7 +153,7 @@ CREATE TABLE `users` (
   `email` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL,
   `description` text DEFAULT NULL,
-  `created_at` date NOT NULL DEFAULT current_timestamp(),
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime NOT NULL DEFAULT current_timestamp(),
   `town` varchar(50) NOT NULL,
   `photo` varchar(100) DEFAULT NULL

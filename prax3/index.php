@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <meta charset="UTF-8">
-</head
+</head>
 <body>
     <div class="row">
         <div class="col-sm-12">
@@ -19,7 +19,7 @@
     </div>
     <div class="row">
     <div class="col-sm-12">
-        <form method="post" action="">
+        <form method="post">
             <button id="registration" class="btn btn-info btn-lg" name="reg">Registration</button><br>
             <?php
             if(isset($_POST['reg'])){

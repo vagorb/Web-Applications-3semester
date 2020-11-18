@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
-</head
+</head>
 <body>
 <div class="row">
     <div class="col-sm-12">
@@ -24,7 +24,7 @@
                 <h3>Register to Mini Facebook</h3>
             </div>
             <div>
-                <form action="" method="post">
+                <form method="post">
                     <div class="group">
                         <label for="name">First name</label><input id="name" type="text" class="form-control" placeholder="First Name" name="first_name" required="required">
                     </div><br>
