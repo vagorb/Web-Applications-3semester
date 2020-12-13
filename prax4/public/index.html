@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Yahtzee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="game.js"></script>
+</head>
+<body>
+
+<div id="endModal" class="modal">
+    <div class="modal-content">
+        <p class ="content" id = "finalScore"> </p>
+    </div>
+
+</div>
+
+<div id="waitModal" class="modal">
+    <div class="modal-content">
+        <p class ="content" id = "wait"> Wait for your opponent! </p>
+    </div>
+</div>
+
+
+<div id="startModal" class="modal">
+    <div class="modal-content">
+        <p class ="content"> Enter your name </p>
+        <form id="form" class="" >
+            <label>
+                <input type="text" id="name" required="required" minlength="1">
+            </label><br>
+        </form>
+
+    <div>
+        <p class ="content" id = "start"> Choose number of turns </p>
+        <button id="threeTurns" class = "modelButton">Three</button>
+        <button id="sevenTurns" class = "modelButton">Seven</button>
+        <button id="thirteenTurns" class = "modelButton">Thirteen</button>
+        </div>
+    </div>
+
+</div>
+
+<div class = "center">
+
+<div>
+    <div > <span id="Turn"> Turn 0 </span> </div>
+    <div>
+    </div>
+
+    <table id="table">
+        <tr>
+            <th>Combos</th>
+            <th>Your Score</th>
+            <th>Enemy Score</th>
+        </tr>
+        <tr>
+            <td id="ones" class="cell">Ones</td>
+            <td id="onesScore">0
+            <td id="enemyonesScore">0</td>
+        </tr>
+        <tr>
+            <td id="twos" class="cell">Twos</td>
+            <td id="twosScore">0</td>
+            <td id="enemytwosScore">0</td>
+        </tr>
+        <tr>
+            <td id="threes" class="cell">Threes</td>
+            <td id="threesScore">0</td>
+            <td id="enemythreesScore">0</td>
+        </tr>
+        <tr>
+            <td id="fours" class="cell">Fours</td>
+            <td id="foursScore">0</td>
+            <td id="enemyfoursScore">0</td>
+        </tr>
+        <tr>
+            <td id="fives" class="cell">Fives</td>
+            <td id="fivesScore">0</td>
+            <td id="enemyfivesScore">0</td>
+        </tr>
+        <tr>
+            <td id="sixes" class="cell">Sixes</td>
+            <td id="sixesScore">0</td>
+            <td id="enemysixesScore">0</td>
+        </tr>
+        <tr>
+            <td id="TK" class="cell">Same Three</td>
+            <td id="TKScore">0</td>
+            <td id="enemyTKScore">0</td>
+        </tr>
+        <tr>
+            <td id="FK" class="cell">Same Four</td>
+            <td id="FKScore">0</td>
+            <td id="enemyFKScore">0</td>
+        </tr>
+        <tr>
+            <td id="SS" class="cell">Small Straight</td>
+            <td id="SSScore">0</td>
+            <td id="enemySSScore">0</td>
+        </tr>
+        <tr>
+            <td id="LS" class="cell">Large Straight</td>
+            <td id="LSScore">0</td>
+            <td id="enemyLSScore">0</td>
+        </tr>
+        <tr>
+            <td id="FH" class="cell">Full House</td>
+            <td id="FHScore">0</td>
+            <td id="enemyFHScore">0</td>
+        </tr>
+        <tr>
+            <td id="yahtzee" class="cell">Yahtzee</td>
+            <td id="yahtzeeScore">0</td>
+            <td id="enemyyahtzeeScore">0</td>
+        </tr>
+        <tr>
+            <td id="jokker" class="cell"> Jokker </td>
+            <td id="jokkerScore">0</td>
+            <td id="enemyjokkerScore">0</td>
+        </tr>
+        <tr>
+            <td id="Total"> Score </td>
+            <td id="TotalScore">0</td>
+            <td id="enemyTotalScore">0</td>
+        </tr>
+    </table>
+
+    <table id="results">
+
+    </table>
+    </div>
+    <div class = "dice" id="dice">
+        <div class="die d1" id="0"></div>
+        <div class="die d1" id="1"></div>
+        <div class="die d1" id="2"></div>
+        <div class="die d1" id="3"></div>
+        <div class="die d1" id="4"></div>
+    </div>
+
+    <div class ="rollCounter"> <span id="rolls"> Roll 0/3 </span> </div>
+
+    <div class="Button">
+        <button class="roll" id="roll">Roll</button>
+    </div>
+
+</div>
+</body>
+</html>
