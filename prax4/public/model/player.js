@@ -309,14 +309,14 @@ Player.endGame = async (winner, result) => {
                     }
                 }
             );
-            sql.query("INSERT INTO highScores SET playerId = ?, playerName = ?, playerScore = ?, gameId = ? ", [playerId, name, total, winner.gameId], (err, resp) => {
+            sql.query("INSERT INTO highscores SET playerId = ?, playerName = ?, playerScore = ?, gameId = ? ", [playerId, name, total, winner.gameId], (err, resp) => {
                 if (err) {
                     console.log("error: ", err);
                     result(err, null);
                     return;
                 }
 
-                sql.query(`SELECT * FROM highScores WHERE gameId = ${winner.gameId}`, (err, end) => {
+                sql.query(`SELECT * FROM highscores WHERE gameId = ${winner.gameId}`, (err, end) => {
 
                     if (err) {
                         console.log("error: ", err);
