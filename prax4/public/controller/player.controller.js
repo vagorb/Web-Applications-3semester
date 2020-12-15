@@ -37,7 +37,7 @@ exports.create = (req, res) => {
         if (err)
             res.status(500).send({
                 message:
-                    err.message || "Some error occurred while creating the Customer."
+                    err.message || "Some error occurred while creating the player."
             });
         else res.send(data);
     });
@@ -51,11 +51,11 @@ exports.states = (req, res) => {
         if (err) {
             if (err.kind === "not_found") {
                 res.status(404).send({
-                    message: `Not found Customer with id ${req.params.id}.`
+                    message: `Not found player with id ${req.params.id}.`
                 });
             } else {
                 res.status(500).send({
-                    message: "Error retrieving Customer with id " + req.params.id
+                    message: "Error retrieving player with id " + req.params.id
                 });
             }
         } else res.send(data);
@@ -80,11 +80,11 @@ exports.turn = (req, res) => {
             if (err) {
                 if (err.kind === "not_found") {
                     res.status(404).send({
-                        message: `Not found Customer with id ${req.params.id}.`
+                        message: `Not found player with id ${req.params.id}.`
                     });
                 } else {
                     res.status(500).send({
-                        message: "Error updating Customer with id " + req.params.id
+                        message: "Error updating player with id " + req.params.id
                     });
                 }
             } else res.send(data);

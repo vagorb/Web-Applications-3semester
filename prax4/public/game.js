@@ -24,7 +24,7 @@ function gid(elem) {
 }
 
 function topPlayers() {
-    fetch('http://localhost:3000/topResults', {
+    fetch('http://turing.cs.ttu.ee:6139/topResults', {
         method: 'get',
         headers: {
             'Content-Type': 'application/json'
@@ -84,7 +84,7 @@ function game(value, name) {
         numOfTurns: value
     };
 
-    fetch('http://localhost:3000/players', {
+    fetch('http://turing.cs.ttu.ee:6139/players', {
         method: 'post',
         body: JSON.stringify(body),
         headers: {
@@ -93,11 +93,11 @@ function game(value, name) {
         mode: 'cors'
     })
         .then(res =>  res.json()).then(json => {if (json.state == 0) {
-            console.log(json);
+
         gid("waitModal").style.display = "block";
         enemyTurn(value, name, json.id, json.gameId, -1);
     } else {
-            console.log(json);
+
         yourTurn(value, name, json.id, json.gameId, 0);
     }
     });
@@ -321,8 +321,8 @@ function yourTurn(total, name, id, gameId, curTurn) {
             total: parseInt(totalScore)
         };
 
-        console.log(body);
-        fetch('http://localhost:3000/turn/' + id + "/" + name + "/" + value, {
+
+        fetch('http://turing.cs.ttu.ee:6139/turn/' + id + "/" + name + "/" + value, {
             method: 'put',
             body: JSON.stringify(body),
             headers: {
@@ -341,9 +341,8 @@ function yourTurn(total, name, id, gameId, curTurn) {
 }
 
 function enemyTurn(totalTurns, name, id, gameId, curTurn) {
-    console.log("HERE!")
-    console.log(totalTurns, name, id, gameId, curTurn);
-    fetch('http://localhost:3000/states/' + id, {
+
+    fetch('http://turing.cs.ttu.ee:6139/states/' + id, {
         method: 'get',
         headers: {
             'Content-Type': 'application/json'
@@ -351,7 +350,7 @@ function enemyTurn(totalTurns, name, id, gameId, curTurn) {
         mode: 'cors'
     })
         .then(res =>  res.json()).then(json => {if (json.state == 0) {
-            console.log(json.state);
+
         setTimeout(function () { return enemyTurn(totalTurns, name, id, gameId, curTurn)},2000);
     } else if (json.state == 2) {
             deletePlayers(id, gameId);
@@ -383,7 +382,7 @@ function getResultsForTurn(totalTurns, name, id, gameId, curTurn) {
         const TotalScore = gid("enemyTotalScore");
 
 
-        fetch('http://localhost:3000/turnResults/' + id + "/" + gameId, {
+        fetch('http://turing.cs.ttu.ee:6139/turnResults/' + id + "/" + gameId, {
             method: 'get',
 
             headers: {
@@ -391,7 +390,7 @@ function getResultsForTurn(totalTurns, name, id, gameId, curTurn) {
             },
             mode: 'cors'
         })
-            .then(res => res.json()).then(json => { console.log(json)
+            .then(res => res.json()).then(json => {
             if (json.ones != null && json.ones !== 0 && one == 0) {
                 gid("enemyonesScore").innerHTML = json.ones;
                 TotalScore.innerHTML = Number(TotalScore.innerHTML) + json.ones;
@@ -444,7 +443,7 @@ function getResultsForTurn(totalTurns, name, id, gameId, curTurn) {
 }
 
 function deletePlayers(id, gameId) {
-    fetch('http://localhost:3000/delete/' + gameId, {
+    fetch('http://turing.cs.ttu.ee:6139/delete/' + gameId, {
         method: 'DELETE',
         mode: 'cors'
     })
@@ -469,7 +468,7 @@ function endGame(totalTurns, name, id, gameId) {
         total: total
     };
 
-    fetch('http://localhost:3000/endGame', {
+    fetch('http://turing.cs.ttu.ee:6139/endGame', {
         method: 'post',
         body: JSON.stringify(body),
         headers: {
@@ -491,7 +490,7 @@ function showWinner(name, score) {
 
 function getWinner(id, gameId) {
 
-    fetch('http://localhost:3000/winner/' + gameId, {
+    fetch('http://turing.cs.ttu.ee:6139/winner/' + gameId, {
         method: 'get',
         headers: {
             'Content-Type': 'application/json'
